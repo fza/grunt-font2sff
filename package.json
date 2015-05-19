@@ -1,0 +1,46 @@
+{
+  "name": "grunt-font2cffm",
+  "version": "0.1.0",
+  "description": "Convert fonts to CFFM",
+  "homepage": "https://git.fapprik.com/fza/grunt-font2cffm",
+  "author": {
+    "name": "Felix Zandanel",
+    "email": "felix@zandanel.me",
+    "url": "http://felix.zandanel.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.fapprik.com:fza/grunt-font2cffm.git"
+  },
+  "bugs": {
+    "url": "https://git.fapprik.com/fza/grunt-font2cffm/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "fontkit": "~1.0.3",
+    "lodash": "~3.8.0",
+    "svgpath": "~2.0.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.1",
+    "grunt-release": "~0.12.0",
+    "load-grunt-tasks": "~3.1.0"
+  },
+  "keywords": [
+    "grunt",
+    "gruntplugin",
+    "svg",
+    "parse",
+    "font",
+    "compact",
+    "glyph",
+    "cffm"
+  ]
+}
