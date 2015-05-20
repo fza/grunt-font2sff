@@ -1,14 +1,14 @@
-# grunt-font2cffm
+# grunt-font2sff
 
-> Convert fonts to CFFM
+> Convert fonts to simple font file format
 
-A Grunt task to convert TTF/WOFF/WOFF2 font files to CFFM (Compact Font File Format). CFFM is a special-purpose binary font format that includes just a subset of what Truetype/OpenType offer, but allows simple and fast parsing, suitable for the Browser.
+A Grunt task to convert OTF/TTF/WOFF/WOFF2 font files to SFF (Simple Font File Format). SFF is a special-purpose binary font format that includes just a subset of what Truetype/OpenType offer, but allows simple and fast parsing, suitable for the Browser.
 
 It's primary purpose is typesetting using SVG paths, which often gives better visual results than conventional `<text>` setting in some Browsers. (\*ahem\* Firefox \*ahem\*)
 
-CFFM files can be parsed with [cffm](https://git.fapprik.com/fza/cffm), which also provides an API for typesetting in an SVG context.
+SFF files can be parsed with [sff-svg](https://git.fapprik.com/fza/sff-svg), which also provides an API for typesetting in an SVG context.
 
-A CFFM file includes the same general font metrics than the original font file with glyphs as SVG paths and a kerning table. Ligatures and other font features are not included. CFFM files are not compressed and this is in purpose as CFFM files are meant to be included via [brfs](https://www.npmjs.com/package/brfs) in a browserify bundle, which is then minified and gzipped.
+A SFF file includes the same general font metrics than the original font file with glyphs as SVG paths and a kerning table. Ligatures and other font features are not included. SFF files are not compressed and this is in purpose as SFF files are meant to be included via [brfs](https://www.npmjs.com/package/brfs) in a browserify bundle, which is then minified and gzipped.
 
 ## Getting Started
 
@@ -17,22 +17,22 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-font2cffm --save-dev
+npm install grunt-font2sff --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-font2cffm');
+grunt.loadNpmTasks('grunt-font2sff');
 ```
 
-## The "font2cffm" task
+## The "font2sff" task
 
-In your project's Gruntfile, add a section named "font2cffm" to the data object passed into `grunt.initConfig()`:
+In your project's Gruntfile, add a section named "font2sff" to the data object passed into `grunt.initConfig()`:
 
 ```js
 grunt.initConfig({
-  font2cffm: {
+  font2sff: {
     helvetica: {
       options: {
         charsets: ['english']
@@ -79,7 +79,7 @@ Same format as `options.charsets`. Use this to re-include certain characters tha
 
 ```js
 grunt.initConfig({
-  font2cffm: {
+  font2sff: {
     options: {
       charset: ['english'],
       excludeCharsets: undefined,

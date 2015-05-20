@@ -1,8 +1,8 @@
 {
-  "name": "grunt-font2cffm",
+  "name": "grunt-font2sff",
   "version": "0.1.0",
-  "description": "Convert fonts to CFFM",
-  "homepage": "https://git.fapprik.com/fza/grunt-font2cffm",
+  "description": "Convert fonts to simple font file format",
+  "homepage": "https://git.fapprik.com/fza/grunt-font2sff",
   "author": {
     "name": "Felix Zandanel",
     "email": "felix@zandanel.me",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.fapprik.com:fza/grunt-font2cffm.git"
+    "url": "git@git.fapprik.com:fza/grunt-font2sff.git"
   },
   "bugs": {
-    "url": "https://git.fapprik.com/fza/grunt-font2cffm/issues"
+    "url": "https://git.fapprik.com/fza/grunt-font2sff/issues"
   },
   "license": "MIT",
   "engines": {
@@ -23,7 +23,9 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "async": "~0.9.2",
     "fontkit": "~1.0.3",
+    "format-throw": "~0.1.0",
     "lodash": "~3.8.0",
     "svgpath": "~2.0.0"
   },
