@@ -2,8 +2,8 @@
 
 var path = require('path');
 var async = require('async');
-var createUnicodeSubset = require('./unicode-subset');
-var SffConverter = require('./sff-converter');
+var createUnicodeSubset = require('../lib/unicode-subset');
+var SffConverter = require('../lib/sff-converter');
 
 module.exports = function (grunt) {
 
